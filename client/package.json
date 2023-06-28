@@ -17,7 +17,7 @@
     "reactstrap": "^9.1.10",
     "web-vitals": "^2.1.4"
   },
-  "proxy": "http://localhost:7935",
+  "proxy": "https://shop-redux-production.up.railway.app",
   "scripts": {
     "start": "react-scripts start",
     "build": "CI=false && react-scripts build",

@@ -20,5 +20,6 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
+    console.log(__dirname)
     console.log('App listen on localhost:' + port)
 })
