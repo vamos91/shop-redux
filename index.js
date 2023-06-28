@@ -1,9 +1,12 @@
 const express = require('express')
 const app = express()
+const path = require('path')
 require('dotenv').config()
 const port = process.env.PORT || 3001
 
 app.use(express.json())
+
+app.use(express.static(path.join(__dirname, 'client/build')))
 
 const cartRouter = require('./router/cart')
 const userRouter = require('./router/user')
@@ -13,7 +16,7 @@ app.use('/users', userRouter)
 
 
 app.get('/', (req, res) => {
-    res.send('hello from server')
+    res.sendFile(path.join(__dirname, 'client/build'), 'index.html')
 })
 
 app.listen(port, () => {
